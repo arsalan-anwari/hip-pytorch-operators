@@ -1,0 +1,34 @@
+{
+    "env": {
+        "myIncludePath": [
+            "${workspaceFolder}/hip-pytorch-operators/**"
+        ],
+        "myDefines": [
+            "__HIP__=1",
+            "HIP_TEMPLATE_KERNEL_LAUNCH=1",
+            "__HIP_PLATFORM_AMD__=1"
+        ]
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "compilerPath": "/opt/rocm/bin/amdclang++",
+            "intelliSenseMode": "linux-clang-x86",
+            "includePath": [
+                "/usr/include/**",
+                "/opt/rocm/include/hip",
+                "/opt/rocm/include/hip/amd_detail",
+                "/opt/rocm/lib/llvm/lib/clang/17/include/",
+                "/opt/rocm/lib/llvm/lib/clang/17"
+            ],
+            "defines": [
+                "${myDefines}"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++20",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4,
+    "enableConfigurationSquiggles": true
+}
